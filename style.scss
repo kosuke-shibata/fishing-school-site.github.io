@@ -1,3 +1,5 @@
+@import "mixin";
+
 * {
   margin: 0;
   padding: 0;
@@ -6,10 +8,11 @@ body {
   // background: #e3f2ff;
   width: 100%;
 }
-.background {
+.back {
   img {
     width: 100%;
     vertical-align: middle;
+    z-index: -1;
   }
   .bg-black {
     // top: 650px;
@@ -17,11 +20,13 @@ body {
     background: #000;
     height: 60px;
     width: 100%;
-    
   }
   & nav {
     z-index: 30;
     text-align: center;
+    .menu-button {
+      display: none;
+    }
     & ul {
       list-style: none;
       overflow: hidden;
@@ -141,7 +146,7 @@ body {
     width: 1300px;
     margin: 100px auto 200px;
     font-family: 'Noto Serif JP', serif;
-    .point {
+    .point,.point2{
       padding: 20px;
       background: #D3DEF1;
       display: flex;
@@ -439,4 +444,16 @@ footer {
     text-align: center;
     line-height: 80px;
   }
+}
+
+@media (max-width: 1300px) {
+  @import "breakpoints/1300max";
+}
+
+@media (max-width: 1080px) {
+  @import "breakpoints/1080max";
+}
+
+@media (max-width: 650px) {
+  @import "breakpoints/650max";
 }
