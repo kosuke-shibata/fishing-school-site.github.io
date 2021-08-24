@@ -7,42 +7,47 @@ body {
   width: 100%;
 }
 
-.background img {
+.back img {
   width: 100%;
   vertical-align: middle;
+  z-index: -1;
 }
 
-.background .bg-black {
+.back .bg-black {
   background: #000;
   height: 60px;
   width: 100%;
 }
 
-.background nav {
+.back nav {
   z-index: 30;
   text-align: center;
 }
 
-.background nav ul {
+.back nav .menu-button {
+  display: none;
+}
+
+.back nav ul {
   list-style: none;
   overflow: hidden;
   display: inline-block;
 }
 
-.background nav ul a {
+.back nav ul a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
   line-height: 60px;
 }
 
-.background nav ul a li {
+.back nav ul a li {
   text-align: center;
   float: left;
   padding: 0 20px;
 }
 
-.background .fixed {
+.back .fixed {
   position: fixed;
   top: 0;
   left: 0;
@@ -50,13 +55,13 @@ body {
   z-index: 10;
 }
 
-.background .page-top {
+.back .page-top {
   position: fixed;
   bottom: 0;
   right: 0;
 }
 
-.background .page-top a {
+.back .page-top a {
   position: relative;
   display: inline-block;
   background: #999;
@@ -66,7 +71,7 @@ body {
   padding: 30px 40px;
 }
 
-.background .page-top a::before {
+.back .page-top a::before {
   content: '';
   border: 0px;
   width: 18px;
@@ -81,7 +86,7 @@ body {
   margin-top: -4px;
 }
 
-.background .page-top a:hover {
+.back .page-top a:hover {
   background: #666;
   text-decoration: none;
 }
@@ -164,7 +169,7 @@ body {
   font-family: 'Noto Serif JP', serif;
 }
 
-#appeal .points .point {
+#appeal .points .point, #appeal .points .point2 {
   padding: 20px;
   background: #D3DEF1;
   display: -webkit-box;
@@ -177,17 +182,17 @@ body {
   border-radius: 20px;
 }
 
-#appeal .points .point .point-img {
+#appeal .points .point .point-img, #appeal .points .point2 .point-img {
   width: 35%;
   padding: 10px;
   vertical-align: middle;
 }
 
-#appeal .points .point .point-img img {
+#appeal .points .point .point-img img, #appeal .points .point2 .point-img img {
   width: 100%;
 }
 
-#appeal .points .point .point-message {
+#appeal .points .point .point-message, #appeal .points .point2 .point-message {
   background: #fff;
   width: 40%;
   padding: 10px;
@@ -195,14 +200,14 @@ body {
   border-radius: 20px;
 }
 
-#appeal .points .point .point-message h3 {
+#appeal .points .point .point-message h3, #appeal .points .point2 .point-message h3 {
   padding: 10px 0 50px;
   font-size: 35px;
   text-align: center;
   color: #525151;
 }
 
-#appeal .points .point .point-message p {
+#appeal .points .point .point-message p, #appeal .points .point2 .point-message p {
   padding: 10px;
   font-size: 14px;
   line-height: 30px;
@@ -531,5 +536,287 @@ footer small {
   height: 80px;
   text-align: center;
   line-height: 80px;
+}
+
+@media (max-width: 1080px) {
+  .back {
+    width: 1080px;
+  }
+}
+
+@media (max-width: 650px) {
+  .back {
+    width: 100%;
+  }
+  .back img {
+    margin-top: 40px;
+  }
+  .back .bg-black {
+    height: 40px;
+    float: right;
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  .back .bg-black nav .menu-button {
+    display: block;
+    margin: 0 0 0 auto;
+    overflow: hidden;
+    width: 50px;
+    height: 40px;
+    outline: none !important;
+    background: unset;
+    border: none;
+    cursor: pointer;
+  }
+  .back .bg-black nav .menu-button > span {
+    background: white;
+    width: 30px;
+    height: 3px;
+    display: block;
+    margin-bottom: 6px;
+    -webkit-transition: -webkit-transform 0.4s;
+    transition: -webkit-transform 0.4s;
+    transition: transform 0.4s;
+    transition: transform 0.4s, -webkit-transform 0.4s;
+  }
+  .back .bg-black nav .menu-button > span:last-child {
+    margin-bottom: 0;
+  }
+  .back .bg-black nav ul {
+    display: none;
+    font-size: 14px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    margin-top: 0;
+    padding: 0;
+  }
+  .back .bg-black nav ul a {
+    color: #fff;
+    line-height: 50px;
+    padding-right: 30px;
+    font-weight: normal;
+  }
+  .back .menu-open .menu-button {
+    background: #353434;
+  }
+  .back .menu-open ul {
+    -webkit-animation-name: sample01;
+            animation-name: sample01;
+    -webkit-animation-duration: 0s;
+            animation-duration: 0s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    background: #353434;
+    vertical-align: top;
+  }
+  .back .menu-open ul a:hover {
+    background: #00a2ff;
+    -webkit-animation-name: sample02;
+            animation-name: sample02;
+    -webkit-animation-duration: 0.3s;
+            animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+            animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+            animation-iteration-count: 1;
+    -webkit-animation-direction: normal;
+            animation-direction: normal;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+  }
+  #appeal .points {
+    width: 95%;
+  }
+  #appeal .points .point {
+    display: block;
+  }
+  #appeal .points .point .point-img {
+    width: 100%;
+    padding: 0;
+  }
+  #appeal .points .point .point-message {
+    width: 90%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  #appeal .points .point2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  #appeal .points .point2 .point-message {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 90%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  #appeal .points .point2 .point-img {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 100%;
+    padding: 0;
+  }
+  #concept {
+    width: 95%;
+  }
+  #concept .concept-img {
+    width: 100%;
+  }
+  #concept .concept-message {
+    width: 95%;
+  }
+  #tounament {
+    width: 80%;
+    border-radius: 30px;
+  }
+  #tounament .tounament-sec {
+    border-radius: 30px;
+  }
+  #tounament .tounament-sec .tounament-message h3 {
+    font-size: 40px;
+  }
+  #tounament .tounament-sec .tounament-message p {
+    margin: 20px;
+  }
+  #tounament .tounament-sec .tounament-img {
+    padding: 30px auto;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  #tounament .tounament-sec .tounament-img img {
+    width: 80%;
+    margin-bottom: 50px;
+  }
+  #experience {
+    width: 85%;
+  }
+  #experience .experience-message .flexbox {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  #experience .experience-message .flexbox p {
+    width: 95%;
+  }
+  #experience .experience-message .flexbox .experience-img {
+    width: 90%;
+    margin: 10px;
+    margin-top: 50px;
+  }
+  #new-infomation .new-infos {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  #new-infomation .new-infos .new-info {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  #new-infomation .new-infos .new-info dl dt {
+    font-size: 10px;
+    margin-top: -20px;
+  }
+  #new-infomation .new-infos .new-info dl dd {
+    margin-left: 30px;
+    font-size: 12px;
+  }
+  #rate-list .rate-table {
+    width: 100%;
+  }
+  #rate-list .rate-table thead {
+    font-size: 24px;
+  }
+  #rate-list .rate-table tbody {
+    font-size: 20px;
+    line-height: 35px;
+  }
+  #rate-list .rate-table tbody td span {
+    font-size: 14px;
+  }
+  #rate-list .rate-text {
+    width: 90%;
+  }
+  #tounament-rate .one-people {
+    font-size: 30px;
+  }
+  #tounament-rate img {
+    width: 100%;
+  }
+  footer nav {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  footer nav ul li {
+    width: 50%;
+  }
+  @-webkit-keyframes sample01 {
+    0% {
+      -webkit-transform: translateX(-200px);
+              transform: translateX(-200px);
+    }
+    100% {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+  }
+  @keyframes sample01 {
+    0% {
+      -webkit-transform: translateX(-200px);
+              transform: translateX(-200px);
+    }
+    100% {
+      -webkit-transform: translateX(0px);
+              transform: translateX(0px);
+    }
+  }
+  @-webkit-keyframes sample02 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @keyframes sample02 {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }
 /*# sourceMappingURL=style.css.map */
