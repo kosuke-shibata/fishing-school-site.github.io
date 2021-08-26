@@ -22,6 +22,9 @@ body {
 .back nav {
   z-index: 30;
   text-align: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .back nav .menu-button {
@@ -49,7 +52,7 @@ body {
 
 .back .fixed {
   position: fixed;
-  top: 0;
+  top: 1px;
   left: 0;
   width: 100%;
   z-index: 10;
@@ -538,12 +541,6 @@ footer small {
   line-height: 80px;
 }
 
-@media (max-width: 1080px) {
-  .back {
-    width: 1080px;
-  }
-}
-
 @media (max-width: 650px) {
   .back {
     width: 100%;
@@ -640,47 +637,10 @@ footer small {
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
   }
-  #appeal .points {
-    width: 95%;
-  }
-  #appeal .points .point {
-    display: block;
-  }
-  #appeal .points .point .point-img {
-    width: 100%;
-    padding: 0;
-  }
-  #appeal .points .point .point-message {
-    width: 90%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  #appeal .points .point2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: column;
-            flex-flow: column;
-  }
-  #appeal .points .point2 .point-message {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-    width: 90%;
-    margin-top: 50px;
-    margin-bottom: 50px;
-  }
-  #appeal .points .point2 .point-img {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-    width: 100%;
-    padding: 0;
-  }
   #concept {
     width: 95%;
+    margin-left: auto;
+    margin-right: auto;
   }
   #concept .concept-img {
     width: 100%;
@@ -689,8 +649,10 @@ footer small {
     width: 95%;
   }
   #tounament {
-    width: 80%;
+    widtH: 70% !important;
     border-radius: 30px;
+    margin-left: auto;
+    margin-right: auto;
   }
   #tounament .tounament-sec {
     border-radius: 30px;
@@ -710,7 +672,7 @@ footer small {
   }
   #tounament .tounament-sec .tounament-img img {
     width: 80%;
-    margin-bottom: 50px;
+    margin: 0px auto 50px;
   }
   #experience {
     width: 85%;
@@ -720,14 +682,17 @@ footer small {
     -webkit-box-direction: normal;
         -ms-flex-flow: column;
             flex-flow: column;
+    margin: 0 auto;
   }
   #experience .experience-message .flexbox p {
-    width: 95%;
+    width: 90%;
   }
   #experience .experience-message .flexbox .experience-img {
     width: 90%;
-    margin: 10px;
-    margin-top: 50px;
+    margin-top: 50px auto 10px;
+  }
+  #experience .experience-message .flexbox .experience-img img {
+    margin: 0 auto;
   }
   #new-infomation .new-infos {
     -webkit-box-orient: vertical;
@@ -817,6 +782,75 @@ footer small {
     100% {
       opacity: 1;
     }
+  }
+}
+
+@media (max-width: 1080px) {
+  .back .bg-black nav ul {
+    font-size: 12px;
+  }
+  .back .bg-black nav ul a li {
+    padding: 0 10px;
+  }
+  #appeal .points {
+    width: 95%;
+  }
+  #appeal .points .point {
+    display: block;
+  }
+  #appeal .points .point .point-img {
+    width: 50%;
+    padding: 0;
+    margin: 0 auto;
+  }
+  #appeal .points .point .point-message {
+    width: 90%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  #appeal .points .point2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+  }
+  #appeal .points .point2 .point-message {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    width: 90%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  #appeal .points .point2 .point-img {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    width: 50%;
+    margin: 0 auto;
+    padding: 0;
+  }
+  #concept {
+    width: 100%;
+  }
+  #tounament {
+    width: 85%;
+  }
+  #tounament .tounament-sec .tounament-message p {
+    margin: 40px auto;
+  }
+  #tounament .tounament-sec .tounament-img {
+    padding-left: 0;
+  }
+  #tounament .tounament-sec .tounament-img img {
+    width: 50%;
+    margin-right: 20px;
+  }
+  #experience {
+    width: 85%;
   }
 }
 /*# sourceMappingURL=style.css.map */
