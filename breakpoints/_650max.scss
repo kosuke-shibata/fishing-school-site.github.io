@@ -84,19 +84,26 @@
     width: 100%;
   }
   .concept-message {
+    h3 {
+      font-size: 24px;
+      span {
+        font-size: 30px;
+      }
+    }
     width: 95%;
   }
 }
 #tounament {
-  widtH: 70% !important;
+  widtH: 80% !important;
   border-radius: 30px;
   margin-left: auto;
   margin-right: auto;
+  padding: 30px;
   .tounament-sec {
     border-radius: 30px;
     .tounament-message {
       h3 {
-        font-size: 40px;
+        font-size: 30px;
       }
       p {
         margin: 20px;
@@ -106,8 +113,8 @@
       padding: 30px auto;
       flex-flow: column;
       img {
-        width: 80%;
-        margin: 0px auto 50px;
+        width: 80% !important;
+        margin: 0px auto 50px !important;
       }
     }
   }
