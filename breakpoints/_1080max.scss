@@ -1,0 +1,71 @@
+.back {
+  .bg-black {
+    & nav {
+      & ul {
+        font-size: 12px;
+        & a {
+          & li {
+            padding: 0 10px;
+          }
+        }
+      }
+    }
+  }
+}
+#appeal {
+  .points {
+    width: 95%;
+    .point {
+      display: block;
+      .point-img {
+        width: 50%;
+        padding: 0;
+        margin: 0 auto;
+      }
+      .point-message {
+        width: 90%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+    }
+    .point2 {
+      display: flex;
+      flex-flow: column;
+      .point-message {
+        order: 2;
+        width: 90%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+      }
+      .point-img {
+        order: 1;
+        width: 50%;
+        margin: 0 auto;
+        padding: 0;
+      }
+    }
+  }
+}
+#concept {
+  width: 100%;
+}
+#tounament {
+  width: 85%;
+  .tounament-sec {
+    .tounament-message {
+      p {
+        margin: 40px auto;
+      }
+    }
+    .tounament-img {
+      padding-left: 0;
+      img {
+        width: 50%;
+        margin-right: 20px;
+      }
+    }
+  }
+}
+#experience {
+  width: 85%;
+}
