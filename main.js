@@ -1,6 +1,6 @@
 $(function () {
   $(window).scroll(function () {
-    if ($(this).scrollTop() > 650) {
+    if ($(this).scrollTop() >= 500) {
       $('.bg-black').addClass('fixed');
     } else {
       $('.bg-black').removeClass('fixed');
